@@ -12,6 +12,11 @@ mongoose.connect("mongodb://localhost/blog");
 //Set view files format to EJS instead of HTML.
 app.set("view engine", "ejs");
 
+//Redirect from / to /articles
+app.get('/', (req, res) => {
+  res.redirect('/articles')
+})
+
 //Add website favicon
 app.use(favicon('./views/images/favicon.ico'));
 
