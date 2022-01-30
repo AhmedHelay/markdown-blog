@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--BootStrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Blog</title>
+  </head>
+  <body>
+    <div class="container m-3 jumbotron shadow p-3 mb-5 bg-white rounded">
+      <h1 class="md-4 font-weight-bold">New Article</h1>
+      <% if (error !=null) {%>
+      <div class="alert alert-danger" role="alert"><%= error%></div>
+      <% }%>
+      <form action="/articles/new" method="POST">
+        <%- include('_form_fields')%>
+      </form>
+    </div>
+  </body>
+</html>
