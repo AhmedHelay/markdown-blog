@@ -1,2 +1,11 @@
 # markdown-blog
-A markdown website 
+
+A markdown website site
+
+## Tools
+
+- expressJS
+- CRUD
+- mongoose
+- ejs
+
